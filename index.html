@@ -220,10 +220,11 @@
             const name = document.createElement('h3');
             name.textContent = model;
 
+            // Change Google search link to Google Images
             const googleLink = document.createElement('a');
-            googleLink.href = `https://www.google.com/search?q=${model.replace(/ /g, '+')}+hot+pics`;
+            googleLink.href = `https://www.google.com/search?hl=en&tbm=isch&q=${model.replace(/ /g, '+')}+hot+pics`;
             googleLink.target = "_blank";
-            googleLink.textContent = "Google Search";
+            googleLink.textContent = "Google Images";
 
             modelCard.appendChild(img);
             modelCard.appendChild(name);
