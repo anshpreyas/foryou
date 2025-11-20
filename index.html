@@ -4,39 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion & Glamour Models</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        .model-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
         }
         .model-card {
-            background: #fff;
             border: 1px solid #ddd;
-            padding: 20px;
-            margin: 10px;
-            width: 200px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .model-card h3 {
-            margin-bottom: 10px;
-            font-size: 18px;
+        .model-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .category {
+            margin-top: 40px;
+        }
+        .category h3 {
+            font-size: 28px;
+            color: #0073e6;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .model-card h4 {
+            font-size: 20px;
+            margin-top: 10px;
             color: #333;
         }
         .model-card a {
@@ -47,104 +45,78 @@
         .model-card a:hover {
             text-decoration: underline;
         }
+        .google-link img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Fashion & Glamour Models</h2>
-    <div class="model-list">
-        <!-- Instagram Models Section -->
-        <div class="model-card">
-            <h3>Kendall Jenner</h3>
-            <a href="https://www.instagram.com/kendalljenner/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Gigi Hadid</h3>
-            <a href="https://www.instagram.com/gigihadid/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Kaia Gerber</h3>
-            <a href="https://www.instagram.com/kaiagerber/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Lupita Nyong’o</h3>
-            <a href="https://www.instagram.com/lupitanyongo/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Emily Ratajkowski</h3>
-            <a href="https://www.instagram.com/emrata/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Hailey Bieber</h3>
-            <a href="https://www.instagram.com/haileybieber/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Irina Shayk</h3>
-            <a href="https://www.instagram.com/irinashayk/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Ashley Graham</h3>
-            <a href="https://www.instagram.com/ashleygraham/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Lady Gaga</h3>
-            <a href="https://www.instagram.com/ladygaga/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Teyana Taylor</h3>
-            <a href="https://www.instagram.com/teyanataylor/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Sasha Pivovarova</h3>
-            <a href="https://www.instagram.com/sashapivovarova/" target="_blank">Instagram</a>
-        </div>
-        <div class="model-card">
-            <h3>Anja Rubik</h3>
-            <a href="https://www.instagram.com/anjarubik/" target="_blank">Instagram</a>
-        </div>
+    <h2 class="text-center my-4">Fashion & Glamour Models</h2>
 
-        <!-- Adult Film Stars Section (Generated via Loop in JavaScript) -->
-        <div id="adult-models"></div>
+    <!-- Adult Models (Google Links with Images) -->
+    <div class="category">
+        <h3>Adult Models (Google Search Links with Images)</h3>
+        <div class="row" id="adult-models"></div>
     </div>
+
 </div>
 
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <script>
-    // Array of adult film stars
-    const adultModels = [
-        'Mia Khalifa', 'Sasha Grey', 'Stormy Daniels', 'Kendra Wilkinson', 
-        'Jenna Jameson', 'Tera Patrick', 'Alexis Texas', 'Abella Danger', 
-        'Riley Reid', 'Katie Morgan', 'Kimmy Granger', 'Holly Randall', 
-        'Eva Lovia', 'Dani Daniels', 'Kelsi Monroe', 'August Ames', 
-        'Nicole Aniston', 'Jenna Haze', 'Cherie DeVille', 'Kendra Lust'
-    ];
+// Function to fetch images from Unsplash API
+async function fetchImage(query) {
+    const accessKey = 'YOUR_UNSPLASH_API_KEY'; // Replace with your Unsplash API Key
+    const url = `https://api.unsplash.com/photos/random?query=${query}&client_id=${accessKey}&count=1`;
 
-    // Get the div where we'll add the adult model cards
-    const adultModelsDiv = document.getElementById('adult-models');
+    const response = await fetch(url);
+    const data = await response.json();
+    return data[0]?.urls?.small || 'https://via.placeholder.com/200'; // Default placeholder if no image is found
+}
 
-    // Loop through the adultModels array and create HTML for each model
-    adultModels.forEach(model => {
-        // Create a new div for each model
-        const modelCard = document.createElement('div');
-        modelCard.classList.add('model-card');
-
-        // Create the model name heading
-        const modelName = document.createElement('h3');
-        modelName.textContent = model;
-
-        // Create the Google Search link
-        const googleLink = document.createElement('a');
-        googleLink.href = `https://www.pornhat.com/search/${model}/`;
-        googleLink.target = "_blank";
-        googleLink.textContent = "Google Search";
-
-        // Append the name and link to the modelCard
-        modelCard.appendChild(modelName);
-        modelCard.appendChild(googleLink);
-
-        // Append the modelCard to the adultModelsDiv
-        adultModelsDiv.appendChild(modelCard);
+// Function to create Google Search link with image for Adult Models
+function createGoogleSearchWithImage(name, containerId) {
+    fetchImage(name).then(imageUrl => {
+        const container = document.getElementById(containerId);
+        const card = document.createElement('div');
+        card.classList.add('col-md-3');
+        card.classList.add('model-card');
+        card.classList.add('google-link');
+        
+        card.innerHTML = `
+            <div class="d-flex align-items-center">
+                <img src="${imageUrl}" alt="${name}">
+                <div>
+                    <h4>${name}</h4>
+                    <a href="https://www.google.com/search?q=${name}" target="_blank">Search on Google</a>
+                </div>
+            </div>
+        `;
+        
+        container.appendChild(card);
     });
+}
+
+// Adult Models (Google Search with Images)
+createGoogleSearchWithImage("Mia Khalifa", "adult-models");
+createGoogleSearchWithImage("Sasha Grey", "adult-models");
+createGoogleSearchWithImage("Stormy Daniels", "adult-models");
+createGoogleSearchWithImage("Kendra Wilkinson", "adult-models");
+createGoogleSearchWithImage("Jenna Jameson", "adult-models");
+createGoogleSearchWithImage("Tera Patrick", "adult-models");
+createGoogleSearchWithImage("Alexis Texas", "adult-models");
+createGoogleSearchWithImage("Abella Danger", "adult-models");
+createGoogleSearchWithImage("Riley Reid", "adult-models");
+createGoogleSearchWithImage("Katie Morgan", "adult-models");
+
 </script>
 
 </body>
