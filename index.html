@@ -222,3 +222,16 @@
 
             const googleLink = document.createElement('a');
             googleLink.href = `https://www.google.com/search?q=${model.replace(/ /g, '+')}+hot+pics`;
+            googleLink.target = "_blank";
+            googleLink.textContent = "Google Search";
+
+            modelCard.appendChild(img);
+            modelCard.appendChild(name);
+            modelCard.appendChild(googleLink);
+            col.appendChild(modelCard);
+            container.appendChild(col);
+        });
+    </script>
+
+</body>
+</html>
