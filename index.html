@@ -4,225 +4,280 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion & Glamour Models for Empowerment</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom Styles */
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Arial', sans-serif;
-        }
 
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
         header {
             background-color: #343a40;
             color: white;
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
         }
-
         header h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 700;
             margin-bottom: 10px;
         }
-
         header p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            margin-bottom: 0;
         }
-
         .section-title {
             font-size: 2.5rem;
-            margin: 40px 0 20px;
             color: #333;
+            margin-top: 50px;
+            margin-bottom: 20px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
-
         .model-card {
             background-color: #fff;
-            border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            margin-bottom: 20px;
         }
-
         .model-card img {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
             width: 100%;
-            height: 250px;
+            height: 200px;
             object-fit: cover;
         }
-
         .model-card h3 {
             font-size: 1.5rem;
-            margin: 15px 0;
             color: #333;
+            padding: 15px;
+            background-color: #f8f9fa;
         }
-
         .model-card a {
+            display: block;
             text-decoration: none;
-            font-weight: bold;
             color: #007bff;
+            padding: 10px;
+            background-color: #f8f9fa;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 0 0 10px 10px;
         }
-
+        .model-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
         .model-card a:hover {
             text-decoration: underline;
         }
-
-        .model-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        .category-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
-
         footer {
             background-color: #343a40;
             color: white;
             padding: 20px;
             text-align: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .row-cols-md-4 {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .section {
             margin-top: 50px;
         }
-
-        .category-header {
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            font-size: 1.8rem;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            text-align: center;
+        .safesearch-info {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ff0000;
         }
-
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Fashion & Glamour Models for Empowerment</h1>
-        <p>Explore and discover models from various categories</p>
-    </header>
+<!-- Header -->
+<header>
+    <h1>Fashion & Glamour Models for Empowerment</h1>
+    <p>Explore empowering models from various categories</p>
+</header>
 
-    <!-- Main Content -->
-    <div class="container">
+<!-- Main Content -->
+<div class="container">
 
-        <!-- High Fashion Models -->
-        <div class="section">
-            <div class="category-header">High Fashion Models</div>
-            <div class="row row-cols-md-4">
-                <!-- Example Model -->
-                <div class="col">
-                    <div class="model-card">
-                        <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Kendall Jenner">
-                        <h3>Kendall Jenner</h3>
-                        <a href="https://www.instagram.com/kendalljenner/" target="_blank">Instagram</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="model-card">
-                        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Gigi Hadid">
-                        <h3>Gigi Hadid</h3>
-                        <a href="https://www.instagram.com/gigihadid/" target="_blank">Instagram</a>
-                    </div>
-                </div>
-                <!-- Add more models as needed -->
+    <!-- 1. Classic Glamour Models -->
+    <div class="section">
+        <div class="category-header">Classic Glamour Models</div>
+        <div class="row row-cols-md-4 row-cols-1 g-4">
+            <!-- Add 10 classic models here -->
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Model">
+                <h3>Kendall Jenner</h3>
+                <a href="https://www.instagram.com/kendalljenner/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Model">
+                <h3>Gigi Hadid</h3>
+                <a href="https://www.instagram.com/gigihadid/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Model">
+                <h3>Kaia Gerber</h3>
+                <a href="https://www.instagram.com/kaiagerber/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Model">
+                <h3>Lupita Nyong’o</h3>
+                <a href="https://www.instagram.com/lupitanyongo/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Model">
+                <h3>Joan Smalls</h3>
+                <a href="https://www.instagram.com/joansmalls/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Model">
+                <h3>Adriana Lima</h3>
+                <a href="https://www.instagram.com/adrianalima/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Model">
+                <h3>Bella Hadid</h3>
+                <a href="https://www.instagram.com/bellahadid/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Model">
+                <h3>Hailey Bieber</h3>
+                <a href="https://www.instagram.com/haileybieber/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="Model">
+                <h3>Candice Swanepoel</h3>
+                <a href="https://www.instagram.com/angelcandices/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Model">
+                <h3>Karlie Kloss</h3>
+                <a href="https://www.instagram.com/karliekloss/" target="_blank">Instagram</a>
             </div>
         </div>
-
-        <!-- Bold & Empowering Models -->
-        <div class="section">
-            <div class="category-header">Bold & Empowering Models</div>
-            <div class="row row-cols-md-4">
-                <!-- Example Model -->
-                <div class="col">
-                    <div class="model-card">
-                        <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="Emily Ratajkowski">
-                        <h3>Emily Ratajkowski</h3>
-                        <a href="https://www.instagram.com/emrata/" target="_blank">Instagram</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="model-card">
-                        <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Hailey Bieber">
-                        <h3>Hailey Bieber</h3>
-                        <a href="https://www.instagram.com/haileybieber/" target="_blank">Instagram</a>
-                    </div>
-                </div>
-                <!-- Add more models as needed -->
-            </div>
-        </div>
-
-        <!-- More Sections (Fitness Models, Adult Film Stars, etc.) -->
-
-        <!-- Adult Film Stars Section (Updated with New Models) -->
-        <div class="section">
-            <div class="category-header">Adult Film Stars</div>
-            <div class="row row-cols-md-4" id="adult-models-container"></div>
-        </div>
-
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Created by Your Name - Fashion & Glamour 2023</p>
-    </footer>
+    <!-- 2. Sexy & Empowering Models -->
+    <div class="section">
+        <div class="category-header">Sexy & Empowering Models</div>
+        <div class="row row-cols-md-4 row-cols-1 g-4">
+            <!-- Add 10 sexy & empowering models -->
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Model">
+                <h3>Emily Ratajkowski</h3>
+                <a href="https://www.instagram.com/emrata/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Model">
+                <h3>Hailey Bieber</h3>
+                <a href="https://www.instagram.com/haileybieber/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Model">
+                <h3>Irina Shayk</h3>
+                <a href="https://www.instagram.com/irinashayk/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Model">
+                <h3>Ashley Graham</h3>
+                <a href="https://www.instagram.com/ashleygraham/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Model">
+                <h3>Gigi Hadid</h3>
+                <a href="https://www.instagram.com/gigihadid/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Model">
+                <h3>Jourdan Dunn</h3>
+                <a href="https://www.instagram.com/jourdandunn/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Model">
+                <h3>Candice Swanepoel</h3>
+                <a href="https://www.instagram.com/angelcandices/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Model">
+                <h3>Chrissy Teigen</h3>
+                <a href="https://www.instagram.com/chrissyteigen/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="Model">
+                <h3>Rihanna</h3>
+                <a href="https://www.instagram.com/badgalriri/" target="_blank">Instagram</a>
+            </div>
+            <div class="col model-card">
+                <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Model">
+                <h3>Kim Kardashian</h3>
+                <a href="https://www.instagram.com/kimkardashian/" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
 
-    <!-- Bootstrap JS & Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- 3. Adult Film Stars Section -->
+    <div class="section">
+        <div class="category-header">Adult Film Stars</div>
+        <div class="row row-cols-md-4 row-cols-1 g-4" id="adult-models">
+            <!-- Adult models will be populated dynamically -->
+        </div>
+    </div>
 
-    <!-- JavaScript for Adult Film Stars -->
-    <script>
-        const adultModels = [
-            'Lana Rhoades', 'Mia Malkova', 'Violet Myers', 'Kendra Spade', 
-            'Emily Willis', 'Jane Wilde', 'Abigail Mac', 'Adriana Chechik', 
-            'Alina Lopez', 'Jada Stevens', 'Jasmine Jae', 'Ava Addams', 
-            'Gina Valentina', 'Leah Gotti', 'Nikki Benz', 'Carmen Valentina', 
-            'Lily Adams', 'Misty Stone'
-        ];
+    <!-- SafeSearch Info -->
+    <div class="safesearch-info">
+        <p><strong>Tip:</strong> Make sure to disable SafeSearch on Google for better image results.</p>
+        <p><a href="https://www.google.com/preferences" target="_blank">Click here to disable SafeSearch</a></p>
+    </div>
+</div>
 
-        const container = document.getElementById('adult-models-container');
+<!-- Footer -->
+<footer>
+    <p>Created by Your Name - Fashion & Glamour 2023</p>
+</footer>
 
+<!-- Bootstrap JS & Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for Dynamic Model Cards in Adult Section -->
+<script>
+    const adultModels = [
+        { name: "Lena The Plug", imageUrl: "https://randomuser.me/api/portraits/women/1.jpg" },
+        { name: "Abella Danger", imageUrl: "https://randomuser.me/api/portraits/women/2.jpg" },
+        { name: "Mia Malkova", imageUrl: "https://randomuser.me/api/portraits/women/3.jpg" },
+        { name: "Adriana Chechik", imageUrl: "https://randomuser.me/api/portraits/women/4.jpg" },
+        { name: "Riley Reid", imageUrl: "https://randomuser.me/api/portraits/women/5.jpg" },
+        { name: "Dani Daniels", imageUrl: "https://randomuser.me/api/portraits/women/6.jpg" },
+        { name: "Abigail Mac", imageUrl: "https://randomuser.me/api/portraits/women/7.jpg" },
+        { name: "Kenzie Reeves", imageUrl: "https://randomuser.me/api/portraits/women/8.jpg" },
+        { name: "Tori Black", imageUrl: "https://randomuser.me/api/portraits/women/9.jpg" },
+        { name: "Violet Monroe", imageUrl: "https://randomuser.me/api/portraits/women/10.jpg" },
+    ];
+
+    // Function to render adult models dynamically
+    function renderAdultModels() {
+        const adultContainer = document.getElementById("adult-models");
         adultModels.forEach(model => {
-            const col = document.createElement('div');
-            col.classList.add('col');
-            const modelCard = document.createElement('div');
-            modelCard.classList.add('model-card');
-
-            const img = document.createElement('img');
-            img.src = `https://randomuser.me/api/portraits/women/33.jpg`;  // Placeholder image
-
-            const name = document.createElement('h3');
-            name.textContent = model;
-
-            const googleLink = document.createElement('a');
-            googleLink.href = `https://www.google.com/search?hl=en&tbm=isch&q=${model.replace(/ /g, '+')}+hot+pics`;
-            googleLink.target = "_blank";
-            googleLink.textContent = "Google Images";
-
-            modelCard.appendChild(img);
-            modelCard.appendChild(name);
-            modelCard.appendChild(googleLink);
-            col.appendChild(modelCard);
-            container.appendChild(col);
+            const card = document.createElement('div');
+            card.className = 'col';
+            card.innerHTML = `
+                <div class="model-card">
+                    <img src="${model.imageUrl}" alt="${model.name}">
+                    <h3>${model.name}</h3>
+                    <a href="https://www.pornhat.com/search/#${encodeURIComponent(model.name)}" target="_blank">View Pics</a>
+                </div>
+            `;
+            adultContainer.appendChild(card);
         });
-    </script>
+    }
 
+    // Call the function to render the adult models section
+    renderAdultModels();
+</script>
 </body>
 </html>
