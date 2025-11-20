@@ -9,102 +9,132 @@
     <style>
         /* Custom Styles */
         body {
-            background-color: #f4f4f4;
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin: 40px 0 20px;
             color: #333;
-            padding-top: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-
-        h2 {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 1.5em;
+            font-weight: 700;
         }
 
         .model-card {
-            background-color: white;
+            background-color: #fff;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
             margin-bottom: 20px;
         }
 
-        .model-card:hover {
-            transform: translateY(-10px);
+        .model-card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
         }
 
         .model-card h3 {
-            font-size: 1.25em;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin: 15px 0;
             color: #333;
         }
 
         .model-card a {
             text-decoration: none;
-            color: #0073e6;
             font-weight: bold;
+            color: #007bff;
         }
 
         .model-card a:hover {
             text-decoration: underline;
         }
 
-        .model-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
+        .model-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 10px;
-            background-color: #333;
+            background-color: #343a40;
             color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .row-cols-md-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
         }
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <h1>Fashion & Glamour Models for Empowerment</h1>
-        <p class="text-center">Explore the world of empowered fashion and influencers</p>
+        <p>Discover influential fashion, glamour, and empowered models.</p>
     </header>
 
+    <!-- Main Content -->
     <div class="container">
 
         <!-- Section 1: Classic Glamour Models -->
         <div class="section">
-            <h2>1. Classic Glamour Models (High-Fashion & Luxury)</h2>
-            <div class="row">
-                <div class="col-md-4">
+            <h2 class="section-title">1. Classic Glamour Models (High-Fashion & Luxury)</h2>
+            <div class="row row-cols-md-4">
+                <div class="col">
                     <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?model" alt="Model Image">
+                        <img src="https://placekitten.com/500/250" alt="Model Image">
                         <h3>Kendall Jenner</h3>
                         <a href="https://www.instagram.com/kendalljenner/" target="_blank">Instagram</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col">
                     <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?model" alt="Model Image">
+                        <img src="https://placekitten.com/501/250" alt="Model Image">
                         <h3>Gigi Hadid</h3>
                         <a href="https://www.instagram.com/gigihadid/" target="_blank">Instagram</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col">
                     <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?fashion,model" alt="Model Image">
+                        <img src="https://placekitten.com/502/250" alt="Model Image">
                         <h3>Kaia Gerber</h3>
                         <a href="https://www.instagram.com/kaiagerber/" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="model-card">
+                        <img src="https://placekitten.com/503/250" alt="Model Image">
+                        <h3>Lupita Nyong’o</h3>
+                        <a href="https://www.instagram.com/lupitanyongo/" target="_blank">Instagram</a>
                     </div>
                 </div>
             </div>
@@ -112,27 +142,34 @@
 
         <!-- Section 2: Sexy & Empowering Models -->
         <div class="section">
-            <h2>2. Sexy & Empowering Models (Bold, Confident Aesthetic)</h2>
-            <div class="row">
-                <div class="col-md-4">
+            <h2 class="section-title">2. Sexy & Empowering Models (Bold, Confident Aesthetic)</h2>
+            <div class="row row-cols-md-4">
+                <div class="col">
                     <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?sexy,model" alt="Model Image">
+                        <img src="https://placekitten.com/504/250" alt="Model Image">
                         <h3>Emily Ratajkowski</h3>
                         <a href="https://www.instagram.com/emrata/" target="_blank">Instagram</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col">
                     <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?beauty,model" alt="Model Image">
+                        <img src="https://placekitten.com/505/250" alt="Model Image">
                         <h3>Hailey Bieber</h3>
                         <a href="https://www.instagram.com/haileybieber/" target="_blank">Instagram</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col">
                     <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?model,confident" alt="Model Image">
+                        <img src="https://placekitten.com/506/250" alt="Model Image">
                         <h3>Irina Shayk</h3>
                         <a href="https://www.instagram.com/irinashayk/" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="model-card">
+                        <img src="https://placekitten.com/507/250" alt="Model Image">
+                        <h3>Ashley Graham</h3>
+                        <a href="https://www.instagram.com/ashleygraham/" target="_blank">Instagram</a>
                     </div>
                 </div>
             </div>
@@ -140,82 +177,8 @@
 
         <!-- Section 3: Adult Film Stars Who Embrace Fashion -->
         <div class="section">
-            <h2>3. Adult Film Stars Who Embrace Fashion</h2>
-            <div class="row">
-
-                <div class="col-md-4">
-                    <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?woman,portrait" alt="Mia Khalifa">
-                        <h3>Mia Khalifa</h3>
-                        <a href="https://www.google.com/search?q=Mia+Khalifa+hot+pics" target="_blank">Google Search</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?model,studio" alt="Sasha Grey">
-                        <h3>Sasha Grey</h3>
-                        <a href="https://www.google.com/search?q=Sasha+Grey+hot+pics" target="_blank">Google Search</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?fashion,woman" alt="Stormy Daniels">
-                        <h3>Stormy Daniels</h3>
-                        <a href="https://www.google.com/search?q=Stormy+Daniels+hot+pics" target="_blank">Google Search</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?model,beauty" alt="Kendra Wilkinson">
-                        <h3>Kendra Wilkinson</h3>
-                        <a href="https://www.google.com/search?q=Kendra+Wilkinson+hot+pics" target="_blank">Google Search</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?model,studio,light" alt="Jenna Jameson">
-                        <h3>Jenna Jameson</h3>
-                        <a href="https://www.google.com/search?q=Jenna+Jameson+hot+pics" target="_blank">Google Search</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?fashion,girl" alt="Tera Patrick">
-                        <h3>Tera Patrick</h3>
-                        <a href="https://www.google.com/search?q=Tera+Patrick+hot+pics" target="_blank">Google Search</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?model,portrait" alt="Alexis Texas">
-                        <h3>Alexis Texas</h3>
-                        <a href="https://www.google.com/search?q=Alexis+Texas+hot+pics" target="_blank">Google Search</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?fashion,model" alt="Abella Danger">
-                        <h3>Abella Danger</h3>
-                        <a href="https://www.google.com/search?q=Abella+Danger+hot+pics" target="_blank">Google Search</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="model-card">
-                        <img src="https://source.unsplash.com/300x300/?model,smile" alt="Riley Reid">
-                        <h3>Riley Reid</h3>
-                        <a href="https://www.google.com/search?q=Riley+Reid+hot+pics" target="_blank">Google Search</a>
-                    </div>
-                </div>
-
-            </div>
+            <h2 class="section-title">3. Adult Film Stars Who Embrace Fashion</h2>
+            <div class="row row-cols-md-4" id="adult-models-container"></div>
         </div>
 
     </div>
@@ -228,5 +191,34 @@
     <!-- Bootstrap JS & Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+
+    <!-- JavaScript for Adult Model Cards -->
+    <script>
+        // List of adult models
+        const adultModels = [
+            'Mia Khalifa', 'Sasha Grey', 'Stormy Daniels', 'Kendra Wilkinson', 
+            'Jenna Jameson', 'Tera Patrick', 'Alexis Texas', 'Abella Danger', 
+            'Riley Reid', 'Katie Morgan', 'Kimmy Granger', 'Holly Randall', 
+            'Eva Lovia', 'Dani Daniels', 'Kelsi Monroe', 'August Ames', 
+            'Nicole Aniston', 'Jenna Haze', 'Cherie DeVille', 'Kendra Lust'
+        ];
+
+        const container = document.getElementById('adult-models-container');
+
+        adultModels.forEach(model => {
+            // Create model card
+            const col = document.createElement('div');
+            col.classList.add('col');
+
+            const modelCard = document.createElement('div');
+            modelCard.classList.add('model-card');
+
+            const img = document.createElement('img');
+            img.src = 'https://placekitten.com/500/250'; // Placeholder image
+            img.alt = model;
+
+            const name = document.createElement('h3');
+            name.textContent = model;
+
+            const googleLink = document.createElement('a');
+            googleLink.href = `https://www.google.com/search?q=${model.replace(/ /g, '+')}+hot+pics`;
